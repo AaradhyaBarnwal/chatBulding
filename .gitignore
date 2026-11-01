@@ -1,2 +1,4 @@
 node_modules/
-journal.txt
+journal/
+journal/journal.txt
+journal/img

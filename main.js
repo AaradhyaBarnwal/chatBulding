@@ -37,8 +37,8 @@ makeWall(20, 1, 0, 10);
 makeWall(1, 20, -10, 0);
 makeWall(1, 20, 10, 0);
 
-camera.position.set(0, 25, 10);
-camera.lookAt(0, 0, 0);
+// camera.position.set(0, 25, 10);
+// camera.lookAt(0, 0, 0);
 
 /// p1
 const p1G = new THREE.CapsuleGeometry(0.3, 1, 4, 8);
@@ -71,7 +71,8 @@ function varRender() {
   if (btn["KeyD"] && p1.position.x <= 8.5) {
     p1.position.x += 0.5;
   }
+  camera.position.set(p1.position.x, p1.position.y + 10, p1.position.z +8);
+  camera.lookAt(p1.position.x, p1.position.y, p1.position.z);
   renderer.render(scene, camera);
 }
-
 renderer.setAnimationLoop(varRender);
